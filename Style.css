@@ -1,0 +1,18 @@
+.Divisão{
+background-color: rgba(153, 249, 0, 0.603);
+
+
+}
+
+.principal{
+
+    background: lawngreen;
+    width: 100;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+
+}
