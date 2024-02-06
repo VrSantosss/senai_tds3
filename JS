@@ -1,0 +1,24 @@
+function calculate(operation) {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    var result;
+
+    switch (operation) {
+        case 'sum':
+            result = num1 + num2;
+            break;
+        case 'subtract':
+            result = num1 - num2;
+            break;
+        case 'divide':
+            result = num1 / num2;
+            break;
+        case 'average':
+            result = (num1 + num2) / 2;
+            break;
+        default:
+            result = "Operação inválida";
+    }
+
+    document.getElementById("output").textContent = result;
+}
