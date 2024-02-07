@@ -1,53 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+* {
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    margin: 0;
 }
 
-.calculator {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+html {
+    scroll-behavior: smooth;
 }
 
-.input-group {
-    margin-bottom: 10px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    padding: 5px;
+header {
+    background-color: white;
     width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-button {
-    padding: 8px 15px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+li {
+    padding-top: 5px;
+}
+
+a {
+    color: #909090;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 200ms linear;
+}
+
+a:hover {
+    text-decoration: underline;
     cursor: pointer;
-    margin-right: 10px;
+    opacity: 1;
+    transition: all 200ms linear;
 }
 
-button:hover {
-    background-color: #0056b3;
+.profile01 {
+    width: 100%;
+    height: 500px;
+    background-image: url("https://media.comicbook.com/2021/07/one-piece-anime-episode-983-promo-1276030-1280x0.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+    position: relative;
 }
 
-.result {
-    margin-top: 20px;
+.profile-labels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhar itens à esquerda */
+    position: absolute;
+    top: 50%;
+    left: 35%; /* Ajuste o valor conforme necessário */
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+}
+
+.profile-labels p {
+    margin: 20px 0;
+    font-size: 34px;
+}
+
+.profile01 img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute; /* Alterado para posicionamento absoluto */
+    top: 50%; /* Centralizado verticalmente */
+    left: 10%; /* Ajuste o valor conforme necessário */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.profile-labels .name {
+    color: blue;
+    font-weight: bold;
+}
+
+.profile-labels .description {
+    color: blue;
+    font-style: bold;
+}
+
+.profile02,
+.tec,
+.contact {
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
 }

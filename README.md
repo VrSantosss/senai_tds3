@@ -13,7 +13,7 @@ git config --global user.email "seu email"
 git config --global user.name "seunome"
 
 // extensoes 
-git graph -> rastreia meu supositorio
+git graph -> rastreia meu supositorio   
 
 //div 
 como se fosse o escopo da estrutura do codigo 

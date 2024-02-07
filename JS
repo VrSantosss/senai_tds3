@@ -1,6 +1,6 @@
 function calculate(operation) {
-    var num1 = parseFloat(document.getElementById("num1").value);
-    var num2 = parseFloat(document.getElementById("num2").value);
+    var num1 = document.getElementById("num1").valueAsNumber;
+    var num2 = document.getElementById("num2").valueAsNumber;
     var result;
 
     switch (operation) {
