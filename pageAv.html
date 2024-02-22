@@ -20,7 +20,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         /* Estilos para a imagem */
         .profile-image {
             border-radius: 50%;
@@ -38,6 +38,37 @@
 
         .profile-labels p {
             margin: 10px 0; /* Ajustar margem do texto */
+        }
+
+        /* Estilos para a seção de tecnologia */
+        .tec {
+            background-color: #f3f3f3;
+            padding: 20px;
+        }
+
+        .flex-cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: calc(33.33% - 20px);
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
         }
     </style>
 </head>
@@ -62,11 +93,50 @@
     <div id="p2" class="profile02">
         <p>perfil 02</p>
     </div>
+
     <div id="tec" class="tec">
-        <p>tecnologias</p>
+        <h2>Tecnologias</h2>
+        <div class="flex-cards">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laudantium doloribus porro sed et deleniti, accusamus natus ut iure doloremque atque, reprehenderit illo sunt temporibus? Delectus earum quisquam minus blanditiis?</p>
+            </div>
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum provident soluta quas tempore aspernatur modi et laborum deleniti porro natus ipsa saepe nam non laudantium iusto accusamus, id nihil ut.</p>
+            </div>
+            <div class="card">
+                <h3>JAVASCRIPT</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos fugiat similique consectetur, labore rem recusandae consequuntur a, neque dignissimos eligendi vitae asperiores, delectus vero eveniet? Ut tempora impedit inventore!</p>
+            </div>
+        </div>
     </div>
+
     <div id="contact" class="contact">
-        <p>contato</p>
+        <div>
+            <div>
+                <h3>Contato</h3>
+                <p>Mande uma mensagem para nossa equipe!</p>
+            </div>
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
+            </div>
+            <div>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem"></textarea>
+            </div>
+        </div>
+        <button onclick="conferirMensagemWhatsApp()">Conferir dados inseridos</button>
     </div>
+    <div>
+        <div>
+            <p>Nome: <span id="confNome"></span></p>
+            <p>Mensagem: <span id="confMsg"></span></p>
+        </div>
+        <button onclick="enviar()">ZAP</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,24 +1,21 @@
-function calculate(operation) {
-    var num1 = document.getElementById("num1").valueAsNumber;
-    var num2 = document.getElementById("num2").valueAsNumber;
-    var result;
+var nomeGlobal;
+var mensagemGlobal;
 
-    switch (operation) {
-        case 'sum':
-            result = num1 + num2;
-            break;
-        case 'subtract':
-            result = num1 - num2;
-            break;
-        case 'divide':
-            result = num1 / num2;
-            break;
-        case 'average':
-            result = (num1 + num2) / 2;
-            break;
-        default:
-            result = "Operação inválida";
-    }
+function  conferirMensagemWhatsApp() {
+ var nome = document.getElementById("nome").value;
+ var mensagem = document.getElementById("mensagem").value;
 
-    document.getElementById("output").textContent = result;
+   nomeGlobal = nome;
+   mensagemGlobal = mensagem;
+
+   document.getElementById("confNome").textContent = nome;
+   document.getElementById("confMsg").textContent = mensagem;
+}
+
+function enviar(){
+    var numeroTelefone = "55 41 99818-3580";
+
+    var linkWhatsApp ="https://wa.me/" + numeroTelefone + "?text=NOME:" + nomeGlobal + " - " + mensagemGlobal ;
+ 
+    window.open(linkWhatsApp, "_blank")
 }
